@@ -1,0 +1,47 @@
+
+<html>
+	<head>
+		<script type=text/javascript>
+			
+
+		text = "My name is Emily and I am American. My full name is Emily Clarke!";
+
+			var myName="Emily";
+
+			var finalarray=[]
+			var hits=[]
+			var indices=0;
+
+			while(indices != -1){
+
+    		indices = text.indexOf(myName,indices);
+
+    		if(indices != -1){
+        		hits.push(indices)
+        		indices += myName.length;
+    		}
+		}
+
+		for(var i =0;i<hits.length;i++){
+			var val=hits[i];
+
+			for(var j=val;j<myName.length+hits[i];j++){
+
+				finalarray.push(text.substring(j,j+1));
+			}
+		}
+
+		
+
+		if (finalarray.length === 0) {
+			console.log("Your name wasn't found!");
+		} else {
+			console.log(finalarray);
+		}
+
+
+		</script>
+	</head>
+	<body>Hey</body>
+</html>
+
